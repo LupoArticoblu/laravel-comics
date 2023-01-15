@@ -1,1 +1,47 @@
-@import '~bootstrap/scss/bootstrap'
+//@import '~bootstrap/scss/bootstrap';
+
+@use "./partials/mixin" as *;
+@use "./partials/variables" as *;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+main{
+    .inset{
+        background-color: $primary-color;
+        padding: 30px;
+    }
+    h2 {
+        width: 215px;
+        font-size: 1.3rem;
+        transform: translateY(-100%);
+        margin-left: 12%;
+        text-align: center;
+        color: white;
+        padding: 10px 11px;
+        background-color: $secondary-color;
+      }
+}
+
+.content{
+    width: 70%;
+    margin: 0 auto;
+}
+
+button {
+    margin: 0 auto;
+    display: block;
+    @include buttons();
+  }
+
+@import "./partials/header.scss";
+@import "./partials/footer.scss";
+@import "./partials/card.scss";
+@import "./partials/details.scss";
